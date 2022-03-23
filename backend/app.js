@@ -65,6 +65,7 @@ app.use("/api/v1", payment)
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("*", (req, res) => {
+  console.log("forwarding");
   res.sendFile(path.resolve(__dirname, "../frontend/public/index.html"));
 });
 
